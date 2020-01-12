@@ -16,30 +16,30 @@ earn dollar with instagram accounts easily
 ===================================
 
 **Set timezone**
-
+//
 date_default_timezone_set('Europe/London');
 
 **Your Web App**
-
+//
 define("APP_NAME", "InstaFollower");
 
 **Your URL address (change below) format https:// or http://yoururl.com/ <= there is slash at last url**
-
+//
 define("BASE_URL", "http://instafollowers.com/");
 
 **If it is on production set equal true**
-
+//
 define('IS_PRODUCTION', false);
 
 **Database credentials (change below)**
-
+//
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_PASSWORD','');
 define('DB_NAME','earn_dollar');
 
 **Api key from www.paypal.com - if live or real payment then set PRO_PayPal equal true**
-
+//
 define('PRO_PayPal', false);
 if(PRO_PayPal){
     define("PayPal_BASE_URL", "https://api.paypal.com/v1/"); // DO NOT CHANGE THIS LINE
@@ -57,13 +57,13 @@ if(PRO_PayPal){
 }
 
 **Email (change email below)**
-
+//
 define('MAIL_FROM','noreply@instafollowers.com');
 define('MAIL_FROM_NAME', 'instafollowers.com');
 define('MAIL_CONTACT_US','edo.momodo@gmail.com');
 
 **This mail sender use sendgrid (you can may be try sendinblue or mailchimp)**
-
+//
 define('MAIL_MAILER','smtp');
 define('MAIL_HOST','smtp.sendgrid.net');
 define('MAIL_PORT', 587);
@@ -73,11 +73,11 @@ define('MAIL_SMTP_SECURE','tls');
 define('MAIL_SMTP_AUTH', true);
 
 **Api key from www.plentyfollower.com (change api key below)**
-
+//
 define("Plenty_API_KEY", "s0fZNgWpL2i5uwm6XRfhfWsdf2V5tidfgsQyw");
 
 **Price**
-
+//
 define('PRICE_CURRENCY', 'USD');
 $PRICE_LIST = [
     ['pid'=> 0, 'price'=> 0, 'qty'=> 0, 'price_off'=> 0], // DO NOT CHANGE THIS LINE
