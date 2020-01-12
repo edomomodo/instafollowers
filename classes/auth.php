@@ -1,0 +1,2 @@
+<?php class Auth{function __construct(){}public function is_logged_in(){if(isset($_SESSION["\x6cog\x67ed\x69n"])&&$_SESSION["\x6c\x6fgg\x65\x64\x69n"]==true){return true;}}public function logout(){session_destroy();}}
+?>
