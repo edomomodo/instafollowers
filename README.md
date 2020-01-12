@@ -17,83 +17,73 @@ earn dollar with instagram accounts easily
 
 **Set timezone**
 
-//your timezone
-date_default_timezone_set('Europe/London');
+    date_default_timezone_set('Europe/London');
 
 **Your Web App**
 
-//your Web App
-define("APP_NAME", "InstaFollower");
+    define("APP_NAME", "InstaFollower");
 
 **Your URL address (change below) format https:// or http://yoururl.com/ <= there is slash at last url**
 
-//Your URL address
-define("BASE_URL", "http://instafollowers.com/");
+    define("BASE_URL", "http://instafollowers.com/");
 
 **If it is on production set equal true**
 
-//production or not
-define('IS_PRODUCTION', false);
+    define('IS_PRODUCTION', false);
 
 **Database credentials (change below)**
 
-//Database
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASSWORD','');
-define('DB_NAME','earn_dollar');
+    define('DB_HOST','localhost');
+    define('DB_USER','root');
+    define('DB_PASSWORD','');
+    define('DB_NAME','earn_dollar');
 
 **Api key from www.paypal.com - if live or real payment then set PRO_PayPal equal true**
 
-//paypal
-define('PRO_PayPal', false);
-if(PRO_PayPal){
-    define("PayPal_BASE_URL", "https://api.paypal.com/v1/"); // DO NOT CHANGE THIS LINE
+    define('PRO_PayPal', false);
+    if(PRO_PayPal){
+        define("PayPal_BASE_URL", "https://api.paypal.com/v1/"); // DO NOT CHANGE THIS LINE
 
-    //for live or real (change id or secret key below)
-    define("PayPal_CLIENT_ID", "#########################");
-    define("PayPal_SECRET", "###################");
+        //for live or real (change id or secret key below)
+        define("PayPal_CLIENT_ID", "#########################");
+        define("PayPal_SECRET", "###################");
 
-}else{
-    define("PayPal_BASE_URL", "https://api.sandbox.paypal.com/v1/"); // DO NOT CHANGE THIS LINE
+    }else{
+        define("PayPal_BASE_URL", "https://api.sandbox.paypal.com/v1/"); // DO NOT CHANGE THIS LINE
 
-    //for sandbox or test (optional: you can change bellow)
-    define("PayPal_CLIENT_ID", "AQwoZAAHsmA5vBLj_mZffS3NWJjNJODewuV2WakPm-BQilgsawTtnbLvWHNC73idcfiaHBOjaeTDkAS8");
-    define("PayPal_SECRET", "EB3Ozp20s6yHcQFijDOhBV_4k0tt1UL8z4o7sXsmQ2WFCLW3K0vf9pyVdTi70M2x_6kKVKCBYQ1o_o9u");
-}
+        //for sandbox or test (optional: you can change bellow)
+        define("PayPal_CLIENT_ID", "AQwoZAAHsmA5vBLj_mZffS3NWJjNJODewuV2WakPm-BQilgsawTtnbLvWHNC73idcfiaHBOjaeTDkAS8");
+        define("PayPal_SECRET", "EB3Ozp20s6yHcQFijDOhBV_4k0tt1UL8z4o7sXsmQ2WFCLW3K0vf9pyVdTi70M2x_6kKVKCBYQ1o_o9u");
+    }
 
 **Email (change email below)**
 
-//email
-define('MAIL_FROM','noreply@instafollowers.com');
-define('MAIL_FROM_NAME', 'instafollowers.com');
-define('MAIL_CONTACT_US','edo.momodo@gmail.com');
+    define('MAIL_FROM','noreply@instafollowers.com');
+    define('MAIL_FROM_NAME', 'instafollowers.com');
+    define('MAIL_CONTACT_US','edo.momodo@gmail.com');
 
 **This mail sender use sendgrid (you can may be try sendinblue or mailchimp)**
 
-//email sender
-define('MAIL_MAILER','smtp');
-define('MAIL_HOST','smtp.sendgrid.net');
-define('MAIL_PORT', 587);
-define('MAIL_USERNAME','apikey'); // if you use sendgrid then do not change this line
-define('MAIL_PASSWORD','SG.0TqzbAOtgfhfgsdfhcA.Eh4zdfbxfghfsdfp3JknsAsY'); // change its value 
-define('MAIL_SMTP_SECURE','tls');
-define('MAIL_SMTP_AUTH', true);
+    define('MAIL_MAILER','smtp');
+    define('MAIL_HOST','smtp.sendgrid.net');
+    define('MAIL_PORT', 587);
+    define('MAIL_USERNAME','apikey'); // if you use sendgrid then do not change this line
+    define('MAIL_PASSWORD','SG.0TqzbAOtgfhfgsdfhcA.Eh4zdfbxfghfsdfp3JknsAsY'); // change its value 
+    define('MAIL_SMTP_SECURE','tls');
+    define('MAIL_SMTP_AUTH', true);
 
 **Api key from www.plentyfollower.com (change api key below)**
 
-//plentyfollower
-define("Plenty_API_KEY", "s0fZNgWpL2i5uwm6XRfhfWsdf2V5tidfgsQyw");
+    define("Plenty_API_KEY", "s0fZNgWpL2i5uwm6XRfhfWsdf2V5tidfgsQyw");
 
-**Price**
+**Pricing**
 
-//pricing
-define('PRICE_CURRENCY', 'USD');
-$PRICE_LIST = [
-    ['pid'=> 0, 'price'=> 0, 'qty'=> 0, 'price_off'=> 0], // DO NOT CHANGE THIS LINE
+    define('PRICE_CURRENCY', 'USD');
+    $PRICE_LIST = [
+        ['pid'=> 0, 'price'=> 0, 'qty'=> 0, 'price_off'=> 0], // DO NOT CHANGE THIS LINE
 
-    //price list (change price below)
-    ['pid'=> 1, 'price'=> 2.89, 'qty'=> 100, 'price_off'=> 3.69],
-    ['pid'=> 2, 'price'=> 6.99, 'qty'=> 500, 'price_off'=> 8.79],
-    ['pid'=> 3, 'price'=> 13.99, 'qty'=> 1000, 'price_off'=> 16.99]
-];
+        //price list (change price below)
+        ['pid'=> 1, 'price'=> 2.89, 'qty'=> 100, 'price_off'=> 3.69],
+        ['pid'=> 2, 'price'=> 6.99, 'qty'=> 500, 'price_off'=> 8.79],
+        ['pid'=> 3, 'price'=> 13.99, 'qty'=> 1000, 'price_off'=> 16.99]
+    ];
