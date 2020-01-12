@@ -87,3 +87,9 @@ earn dollar with instagram accounts easily
         ['pid'=> 2, 'price'=> 6.99, 'qty'=> 500, 'price_off'=> 8.79],
         ['pid'=> 3, 'price'=> 13.99, 'qty'=> 1000, 'price_off'=> 16.99]
     ];
+
+--------------------------------
+
+**Free Hosting Support this tool**
+
+- http://000webhostapp.com/
