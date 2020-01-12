@@ -93,3 +93,9 @@ earn dollar with instagram accounts easily
 # Free Hosting Support this tool
 
     * 000webhostapp.com
+
+--------------------------------
+
+# If there is error with this tool, please email us (change *at* with *@*)
+
+    edo.momodo at gmail . com    
