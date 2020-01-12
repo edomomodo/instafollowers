@@ -68,13 +68,13 @@ earn dollar with instagram accounts easily
     define('MAIL_HOST','smtp.sendgrid.net');
     define('MAIL_PORT', 587);
     define('MAIL_USERNAME','apikey'); // if you use sendgrid then do not change this line
-    define('MAIL_PASSWORD','SG.0TqzbAOtgfhfgsdfhcA.Eh4zdfbxfghfsdfp3JknsAsY'); // change its value 
+    define('MAIL_PASSWORD','SG.#########################'); // change its value 
     define('MAIL_SMTP_SECURE','tls');
     define('MAIL_SMTP_AUTH', true);
 
 **Api key from www.plentyfollower.com (change api key below)**
 
-    define("Plenty_API_KEY", "s0fZNgWpL2i5uwm6XRfhfWsdf2V5tidfgsQyw");
+    define("Plenty_API_KEY", "#########################");
 
 **Pricing**
 
