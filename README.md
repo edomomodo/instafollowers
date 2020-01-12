@@ -23,7 +23,7 @@ earn dollar with instagram accounts easily
 
     define("APP_NAME", "InstaFollower");
 
-**Your URL address (change below) format https:// or http://yoururl.com/ <= there is slash at last url**
+**Your URL address (change below) format https:// or <pre>http://yoururl.com/</pre> <= there is slash at last url**
 
     define("BASE_URL", "http://instafollowers.com/");
 
