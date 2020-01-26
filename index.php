@@ -213,6 +213,45 @@ require_once('layout/header.php');
 
     </div><!-- end bg-skew -->
 
+    <!-- Testimonials -->
+    <section class="container" id="check">
+        <h2 class="h3 mt-5 mb-4 text-center">Check Orders</h2>
+        <div class="row py-5">
+            <div class="col-md">
+
+            </div>
+            <div class="col-md">
+                <blockquote class="bg-white rounded shadow mb-4 p-4 p-lg-5 text-center">
+
+                    <form role="form" method="GET" action="orders.php" autocomplete="off">                        
+                        <hr>
+                        <?php
+                                if (isset($errors)) {
+                                    foreach ($errors as $error) {
+                                        echo '<p class="bg-danger">' . $error . '</p>';
+                                    }
+                                }
+                                ?>
+
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control input-lg"
+                                placeholder="Email" tabindex="1" required>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6"><input type="submit" name="submit"
+                                    value="Check Order" class="btn btn-pill btn-primary" tabindex="2"></div>
+                        </div>
+                    </form>
+                </blockquote>
+            </div>
+            <div class="col-md">
+
+            </div>
+        </div>
+    </section>
+
+
     <hr class="sep border-primary" role="presentation">
 
     <!-- Testimonials -->
@@ -239,12 +278,12 @@ require_once('layout/header.php');
                         <div class="form-group">
                             <input type="text" name="link" id="link" class="form-control input-lg"
                                 placeholder="Instagram's URL" value="<?= isset($_POST['link']) ? $_POST['link'] : '' ?>"
-                                tabindex="1" required>
+                                tabindex="3" required>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-xs-6 col-md-6"><input type="submit" name="submit"
-                                    value="Get 1 Free Follower" class="btn btn-pill btn-primary" tabindex="2"></div>
+                                    value="Get 1 Free Follower" class="btn btn-pill btn-primary" tabindex="4"></div>
                         </div>
                         <br>
                         <?php if (isset($result)) { ?>

@@ -6,6 +6,20 @@
     <link rel="stylesheet" href="css/theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title><?=APP_NAME?></title>
+    <style>
+.tbl-qa{width: 100%;font-size:0.9em;background-color: #f5f5f5;}
+.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;}
+.tbl-qa .table-row td {padding:10px;background-color: #FDFDFD;vertical-align:top;}
+.button_link {color:#FFF;text-decoration:none; background-color:#428a8e;padding:10px;}
+.keyword{ padding: 7px;width: 80%;border-width:0px;}
+.btn-page{margin-right:10px;padding:5px 10px; border: #CCC 1px solid; background:#FFF; border-radius:4px;cursor:pointer;height:38px;width:38px;margin-bottom:10px}
+.btn-page:hover{background:#F0F0F0;}
+.btn-page.current{background:#CCCCFF;}
+.per-page{text-align:center;margin:20px 0px;}
+.search-start{text-align:right;margin:20px 0px;height: 38px}
+.search-inline{border: #CCC 1px solid; border-radius: 4px;width: 250px;float: right}
+.search-btn{height: 100%;border-width:0px;background:url("img/demo-search-icon.png") no-repeat center right 7px;width: 15%}
+</style>
 </head>
 <body>
     <header class="site-header">
@@ -39,13 +53,7 @@
                                 <a class="dropdown-item" href="logout.php">Logout</a>
                             </div>
                         </li>
-                        <?php } else { ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php">LOGIN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="register.php">REGISTER</a>
-                        </li>
+                        
                         <?php } ?>
                     </ul>
                 </div>

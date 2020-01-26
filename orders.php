@@ -2,8 +2,33 @@
 require_once('includes/app.php');
 define("ROW_PER_PAGE", 5);
 
-//if not logged in redirect to login page
-if (!$auth->is_logged_in()) { header('Location: login.php'); exit(); }
+if ($auth->is_email_in()) { 
+  $email = $auth->get_email();
+}else{
+  if(empty($_GET['email']))  { header('Location: index.php?error=Email is empty'); exit(); }    
+  $email = htmlspecialchars_decode(strtolower($_GET['email']), ENT_QUOTES);
+}
+
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)){ header('Location: index.php?error=Email invalid'); exit(); }
+
+if (!$auth->is_allow_email($email)) { 
+    require_once('classes/user.php');
+    require_once('includes/database.php');
+    if(!isset($db)){$db = getDB();}
+    $user = new User($db);
+
+    if($user->isEmailUser($email)){
+        $auth->set_email($email);
+        header('Location: otp.php'); exit(); 
+        exit;
+    } 
+
+    header('Location: index.php?error=Email invalid'); exit(); 
+    exit;
+}
+
+//if not allow view order then redirect to otp page
+if (!$auth->is_allow_view_order()) { header('Location: otp.php'); exit(); }
 
 require_once('includes/database.php');
 if(!isset($db)){$db = getDB();}
@@ -12,9 +37,9 @@ $search_keyword = '';
 if(!empty($_POST['search']['keyword'])) {
     $search_keyword = $_POST['search']['keyword'];
 }
-$sql = 'SELECT * FROM plenty ';
-$where = 'WHERE link LIKE :keyword ';
-$order_by = 'ORDER BY id DESC ';
+$sql = 'SELECT * FROM plenty WHERE uid_fk=' . $auth->get_user_id() . ' ';
+$where = ' AND link LIKE :keyword ';
+$order_by = ' ORDER BY id DESC ';
 $per_page_html = '';
 $page = 1;
 $start=0;
